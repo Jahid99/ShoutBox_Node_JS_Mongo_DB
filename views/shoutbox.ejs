@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ShoutBox by Jahid</title>
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <link href="/assets/style.css" rel="stylesheet" type="text/css"/>
+
+
+</head>
+<body>
+	<center><h1>ShoutBox by Jahid - using MongoDB and Node JS</h1></center>
+	<div id="shoutbox">
+		
+		<ul>
+			<% for (var i = 0;i<todos.length;i++) { %>
+			<li><%= todos[i].name %> : <%= todos[i].comment %></li> 
+			
+			<% } %>
+		</ul>
+		<form action="/shoutbox" method="POST">
+			<input type="text" name="name" placeholder="Your name" style="width:10%" required/>
+			<input type="text" name="comment" placeholder="Type your comment here" style="width:30%" required/>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+
+   myscroll = $('body');
+  myscroll.scrollTop(myscroll.get(0).scrollHeight);
+
+  </script>
+</body>
+</html>
